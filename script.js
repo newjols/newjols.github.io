@@ -13,6 +13,18 @@ let credit = document.getElementsByClassName('credit');
 const copys = document.querySelector(".copy");
 const copyAlert = document.querySelector(".copyAlert")
 
+const images = document.querySelectorAll('.slider span');
+const sliderContainer = document.querySelector('slider-container');
+const slider = document.querySelector('.slider');
+const prevBtn = document.querySelector('.leftBtn');
+const nextBtn = document.querySelector('.rightBtn');
+
+let current = 1;
+var imgSize = images[0].clientWidth;
+
+window.addEventListener("resize", function() {
+imgSize = images[0].clientWidth;
+})
 
 const shutterAni = [{
                 transform: 'translateY(0)',
@@ -90,28 +102,69 @@ menu[3].addEventListener('mouseout', () => {
 })
 
 
-/*
+slider.style.transform = `translateX(${-imgSize}px)`;
 
-welcome[0].addEventListener('mouseover', () => {
-    welcome[0].src = "./data/joke.png"
-    welcomesub[0].innerText = "넝~담~"
+
+slider.addEventListener('transitionend', ()=> {
+    if(images[current].classList.contains('first-img')){
+        slider.style.transition = 'none';
+        current = images.length - 2;
+        slider.style.transform = `translateX(${-imgSize * current}px)`;
+    }
+    if(images[current].classList.contains('last-img')){
+        slider.style.transition = 'none';
+        current = images.length - current;
+        slider.style.transform = `translateX(${-imgSize * current}px)`;
+    }
 })
 
-welcome[0].addEventListener('mouseout', () => {
-    welcome[0].src = "./data/welcome.png"
-    welcomesub[0].innerText = "자네 지금 웃음이 나오나?"
+
+const next = () => {
+    if (current >= images.length - 1) return;
+    slider.style.transition = '400ms ease-in-out transform';
+    current++;
+    slider.style.transform = `translateX(${-imgSize * current}px)`;
+}
+
+
+let auto = setInterval(next, 2000);
+
+slider.addEventListener('mouseleave', ()=>{
+    auto = setInterval(next, 2000)
 })
 
-for (i = 0; i < 4; i++) {
-    menu[i].addEventListener('mouseover', () => {
-        hover = 1;
-        count += 1
-    });
+slider.addEventListener('mouseenter', ()=>{
+    clearInterval(auto)
+})
 
-    menu[i].addEventListener('mouseout', () => {
-        hover = 0;
-    });
-} */
+prevBtn.addEventListener('click',()=>{
+    if( current <= 0) return;
+     clearInterval(auto);
+    auto = setInterval(next, 2000);
+
+    slider.style.transition = '400ms ease-in-out transform';
+    current--;
+    slider.style.transform = `translateX(${-imgSize * current}px)`;
+   
+
+
+})
+
+
+nextBtn.addEventListener('click',()=>{
+    if( current >= images.length -1 ) return;
+    slider.style.transition = '400ms ease-in-out transform';
+    current++;
+    slider.style.transform = `translateX(${-imgSize * current}px)`;
+        clearInterval(auto);
+
+        auto = setInterval(next, 2000);
+
+
+})
+
+
+
 
 
         
@@ -131,22 +184,3 @@ function copy() {
             console.log('soso?')
 }
 
-hiddenBox[0].addEventListener('mouseenter', () => {
-    credit[0].style.visibility = 'visible'
-})
-
-hiddenBox[0].addEventListener('mouseleave', () => {
-    credit[0].style.visibility = 'hidden'
-})
-
-
-        
-
-
-
-/*setInterval(function () {
-    document.body.style.cursor = "url(./data/" + count % 7 + ".png) 22 22, auto";
-    for (i = 0; i < 4; i++) {
-        menu[i].style.cursor = "url(./data/" + count % 7 + ".png) 22 22, auto"
-    }
-}, 10);*/
