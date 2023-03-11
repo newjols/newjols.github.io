@@ -88,6 +88,48 @@ menu[3].addEventListener('mouseout', () => {
 
 })
 
+
+const zzals = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.png", "7.jpg", "8.jpg", "9.jpg", "10.jpg", "11.jpg", "12.png"];
+
+var chosenImg = zzals[Math.floor(Math.random() * zzals.length)];
+
+var windowWidth = document.body.clientWidth;
+var windowHeight = document.body.clientHeight;
+
+
+window.addEventListener("resize", function() {
+windowWidth = document.body.clientWidth;
+windowHeight = document.body.clientHeight;
+})
+
+const btnImg = document.createElement("img");
+btnImg.src = `./data/profile/${chosenImg}`;
+btnImg.alt = "main-logo";
+
+
+const zzal = document.querySelector(".zzal")
+zzal.insertAdjacentElement("afterbegin", btnImg);
+
+function zzalcount(){
+    chosenImg = zzals[Math.floor(Math.random() * zzals.length)];
+    zzal.style.top = Math.random() * windowHeight + "px";
+    zzal.style.left = Math.random() * windowWidth + "px";
+    btnImg.src = `./data/profile/${chosenImg}`;
+
+}
+
+let autos = setInterval(zzalcount, 400);
+zzal.addEventListener('mouseleave', ()=>{
+    autos = setInterval(zzalcount, 400)
+})
+
+zzal.addEventListener('mouseenter', ()=>{
+    clearInterval(autos)
+})
+
+
+
+
 const images = document.querySelectorAll('.slider span');
 const sliderContainer = document.querySelector('slider-container');
 const slider = document.querySelector('.slider');
@@ -184,4 +226,8 @@ function copy() {
     copyAlert.animate(shutterAni, timing);
             console.log('soso?')
 }
+
+
+
+
 
