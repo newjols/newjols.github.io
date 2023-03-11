@@ -13,19 +13,6 @@ let credit = document.getElementsByClassName('credit');
 const copys = document.querySelector(".copy");
 const copyAlert = document.querySelector(".copyAlert")
 
-const images = document.querySelectorAll('.slider span');
-const sliderContainer = document.querySelector('slider-container');
-const slider = document.querySelector('.slider');
-const prevBtn = document.querySelector('.leftBtn');
-const nextBtn = document.querySelector('.rightBtn');
-
-let current = 1;
-var imgSize = images[0].clientWidth;
-
-window.addEventListener("resize", function() {
-imgSize = images[0].clientWidth;
-})
-
 const shutterAni = [{
                 transform: 'translateY(0)',
                 opacity: 1,
@@ -100,6 +87,20 @@ menu[3].addEventListener('mouseout', () => {
     menuText[3].style.color = 'var(--text)'
 
 })
+
+const images = document.querySelectorAll('.slider span');
+const sliderContainer = document.querySelector('slider-container');
+const slider = document.querySelector('.slider');
+const prevBtn = document.querySelector('.leftBtn');
+const nextBtn = document.querySelector('.rightBtn');
+
+let current = 1;
+var imgSize = images[0].clientWidth;
+
+window.addEventListener("resize", function() {
+imgSize = images[0].clientWidth;
+})
+
 
 
 slider.style.transform = `translateX(${-imgSize}px)`;
