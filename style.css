@@ -301,7 +301,7 @@ li {
 .copyAlert {
     opacity: 0;
     position: absolute;
-    bottom: 150px;
+    top: calc(100% - 120px);
     left: 50%;
     transform: translateX(-50%);
     height:10px;
