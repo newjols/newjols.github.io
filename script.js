@@ -56,14 +56,18 @@ function fadeLogo() {
 }
 
 
-
-menuText[0].addEventListener('mouseover', () => {
+function Mobile(){
+	return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);}
+	
+    if (Mobile()){
+        console.log('soso')
+        
+    } else {
+        menuText[0].addEventListener('mouseover', () => {
     fuck[0].style.visibility = 'visible'
     fuck[0].style.opacity = '1';
 
     menuText[0].style.color = 'var(--prim)'
-
-    console.log('sosoo')
 })
 
 menu[0].addEventListener('mouseout', () => {
@@ -111,6 +115,12 @@ menu[3].addEventListener('mouseout', () => {
     menuText[3].style.color = 'var(--text)'
 
 })
+
+        
+        
+    }
+
+
 
 
 const zzals = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.png", "7.jpg", "8.jpg", "9.jpg", "10.jpg", "11.jpg", "12.png"];
@@ -174,7 +184,6 @@ var waitNum = 10;
 setInterval(function () {
     var counts = mouseMoveCounter
 
-    console.log(jokenum)
     
 
 
@@ -206,7 +215,6 @@ setInterval(function () {
 
 
         joke.innerHTML = "넝~담~"
-        console.log(jokenum)
 
     }
     if (counts == 3) {
@@ -329,5 +337,4 @@ function copyToClipboard(val) {
 function copy() {
     copyToClipboard('https://drive.google.com/drive/folders/1XE3Xg_4xXskUGk55hKuqU_3aqL8a876W?usp=sharing');
     copyAlert.animate(shutterAni, timing);
-    console.log('soso?')
 }
