@@ -514,4 +514,29 @@ img {
     position: absolute;
     transform: translate(-50%, -50%);
     visibility: hidden;
+    z-index: 999;
+    
+}
+
+.zzals{
+    
+    position: absolute;
+        transform: translate(-50%, -50%);
+
+}
+
+.rest{
+    font-weight: 500;
+   color: var(--prim);
+    font-size: 14px;
+    letter-spacing: 2px;
+    word-spacing: 0px;
+}
+
+.joke{
+    font-weight: 500;
+   color: var(--text);
+    font-size: 14px;
+    letter-spacing: 2px;
+    
 }
