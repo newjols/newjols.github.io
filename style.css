@@ -315,16 +315,6 @@ li {
 }
 
 
-
-.copyAlert {
-    opacity: 0;
-    position: absolute;
-    top: calc(100% - 120px);
-    left: 50%;
-    transform: translateX(-50%);
-    height:10px;
-}
-
 .upperLink {
     animation: blink-effect 5s step-end infinite;
 }
@@ -608,4 +598,8 @@ img {
     top: calc(45% + 70px);
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.copyAlert{
+    display: none;
 }

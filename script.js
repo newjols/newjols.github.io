@@ -56,6 +56,7 @@ function fadeLogo() {
 }
 
 
+
 function Mobile(){
 	return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);}
 	
@@ -119,6 +120,13 @@ menu[3].addEventListener('mouseout', () => {
         
         
     }
+
+
+function copy(){
+     window.navigator.clipboard.writeText(copyAlert.textContent).then(() => {
+        alert("초대글이 복사되었습니다 핫. 압도적 감사..");
+      });
+}
 
 
 
@@ -319,22 +327,3 @@ nextBtn.addEventListener('click', () => {
 
 })
 
-
-
-
-
-
-
-function copyToClipboard(val) {
-    const t = document.createElement("textarea");
-    document.body.appendChild(t);
-    t.value = val;
-    t.select();
-    document.execCommand('copy');
-    document.body.removeChild(t);
-}
-
-function copy() {
-    copyToClipboard('https://drive.google.com/drive/folders/1XE3Xg_4xXskUGk55hKuqU_3aqL8a876W?usp=sharing');
-    copyAlert.animate(shutterAni, timing);
-}
