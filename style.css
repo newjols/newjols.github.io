@@ -22,6 +22,55 @@ a {
     text-decoration: none;
 }
 
+
+@keyframes shake {
+            0% {
+                transform: translate(0.3px, 0.3px) rotate(0deg);
+            }
+
+            10% {
+                transform: translate(-0.3px, -0, 6px) rotate(-0.4deg);
+            }
+
+            20% {
+                transform: translate(-0, 6px, 0px) rotate(0.8deg);
+            }
+
+            30% {
+                transform: translate(0, 6px, 0, 6px) rotate(0deg);
+            }
+
+            40% {
+                transform: translate(0.3px, -0.3px) rotate(0.8deg);
+            }
+
+            50% {
+                transform: translate(-0.3px, 0, 6px) rotate(-0.8deg);
+            }
+
+            60% {
+                transform: translate(-0, 6px, 0.3px) rotate(0deg);
+            }
+
+            70% {
+                transform: translate(0, 6px, 0.3px) rotate(-0.8deg);
+            }
+
+            80% {
+                transform: translate(-0.3px, -0.3px) rotate(0.8deg);
+            }
+
+            90% {
+                transform: translate(0.3px, 0, 6px) rotate(0deg);
+            }
+
+            100% {
+                transform: translate(0.3px, -0, 6px) rotate(-0.8deg);
+            }
+        }
+
+
+
 a:link,
 :active,
 :visited,
@@ -122,7 +171,7 @@ li {
     word-spacing: 3px;
     text-align: center;
     pointer-events: none;
-    z-index: 999;
+    z-index: 100;
 }
 
 
@@ -196,35 +245,26 @@ li {
 }
 
 .fuck {
+    width: 90vw;
     visibility: hidden;
     position: fixed;
-    font-size: 700px;
-    color: var(--prim);
-    font-weight: 100;
-    bottom: 50%;
-    line-height: 0;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
+    z-index: 99;
 }
 
 
 .logo {
+     width: 90vw;
     position: fixed;
-    bottom: -13px;
+    opacity: 0;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
-    width: 95vw;
-    visibility: hidden;
+    transform: translate(-50%, -50%);
+    z-index: 99;
 }
 
-.right {
-    width: 600px;
-    position: absolute;
-    right: -380px;
-    top: -1200px;
-
-}
 
 .fio {
     height: 18px;
@@ -514,7 +554,7 @@ img {
     position: absolute;
     transform: translate(-50%, -50%);
     visibility: hidden;
-    z-index: 999;
+    z-index: 98;
     
 }
 
@@ -531,6 +571,9 @@ img {
     font-size: 14px;
     letter-spacing: 2px;
     word-spacing: 0px;
+                animation: shake 0.2s;
+            animation-iteration-count: infinite;
+    z-index: 99;
 }
 
 .joke{
@@ -539,4 +582,11 @@ img {
     font-size: 14px;
     letter-spacing: 2px;
     
+}
+.gif{
+    position: fixed;
+    width: 100px;
+    top: calc(45% + 70px);
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

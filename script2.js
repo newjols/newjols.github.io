@@ -21,46 +21,35 @@ const prevBtn = document.querySelector('.leftBtn');
 const nextBtn = document.querySelector('.rightBtn');
 
 const shutterAni = [{
-        opacity: 1
-    },
+    
+        opacity: 1,
+
+            },
 
     {
+        transform: 'rotate(30deg)',
+        offset: 0.5
+            },
+
+    {
+        transform: 'translateY(' + (-100) + 'px)',
+
         opacity: 0,
+
         offset: 1
-    }];
+            }
+        ];
 
 const timing = {
     duration: 900,
-    iterations: 1
+    iterations: 1,
 }
 
-
-const logo = document.querySelector(".logo");
-
-const logoAni = [{
-        opacity: 1
-    },
-    {
-        opacity: 0,
-        offset: 1
-    }];
-
-
-const logoTiming = {
-    duration: 1400,
-    iteration: 1
-}
-
-function fadeLogo() {
-    logo.animate(logoAni, logoTiming);
-}
 
 
 
 menuText[0].addEventListener('mouseover', () => {
     fuck[0].style.visibility = 'visible'
-    fuck[0].style.opacity = '1';
-
     menuText[0].style.color = 'var(--prim)'
 
     console.log('sosoo')
@@ -74,8 +63,6 @@ menu[0].addEventListener('mouseout', () => {
 })
 menu[1].addEventListener('mouseover', () => {
     fuck[0].style.visibility = 'visible'
-    fuck[0].style.opacity = '1';
-
     menuText[1].style.color = 'var(--prim)'
 
 })
@@ -87,8 +74,6 @@ menu[1].addEventListener('mouseout', () => {
 })
 menu[2].addEventListener('mouseover', () => {
     fuck[0].style.visibility = 'visible'
-    fuck[0].style.opacity = '1';
-
     menuText[2].style.color = 'var(--prim)'
 
 })
@@ -100,8 +85,6 @@ menu[2].addEventListener('mouseout', () => {
 })
 menu[3].addEventListener('mouseover', () => {
     fuck[0].style.visibility = 'visible'
-    fuck[0].style.opacity = '1';
-
     menuText[3].style.color = 'var(--prim)'
 
 })
@@ -116,9 +99,7 @@ menu[3].addEventListener('mouseout', () => {
 const zzals = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.png", "7.jpg", "8.jpg", "9.jpg", "10.jpg", "11.jpg", "12.png"];
 
 var zzalLen = zzals.length
-var num = Array.from({
-    length: zzalLen
-}, (item, index) => index);
+var num = Array.from({length: zzalLen}, (item, index) => index);
 num.sort(() => Math.random() - 0.5);
 
 
@@ -144,95 +125,42 @@ window.addEventListener("resize", function () {
     windowHeight = document.body.clientHeight;
 })
 
-
+const btnImg = document.createElement("img");
+btnImg.src = `./data/profile/${chosenImg}`;
+btnImg.alt = "main-logo";
 const zzal = document.querySelector(".zzal")
+zzal.insertAdjacentElement("afterbegin", btnImg);
 
 function zzalcount() {
-
-    const btnImg = document.createElement("img");
-    btnImg.className = 'zzals zzal' + mouseMoveCounter
-    zzal.insertAdjacentElement("afterbegin", btnImg);
-
-    chosenImg = zzals[num[mouseMoveCounter % zzalLen]];
+    chosenImg = zzals[num[mouseMoveCounter%zzalLen]];
     btnImg.src = `./data/profile/${chosenImg}`;
+}
 
-    btnImg.style.top = Math.random() * windowHeight + "px";
-    btnImg.style.left = Math.random() * windowWidth + "px";
-
+function zzalposition(){
+    zzal.style.top = Math.random() * windowHeight + "px";
+    zzal.style.left = Math.random() * windowWidth + "px";
 }
 
 
-var intervalCount = setInterval(zzalcount, 1000);
-var message = document.querySelector('.messageText')
-var rest = document.querySelector('.rest')
-var joke = document.querySelector('.joke')
-var jokenum = 0;
-var waitNum = 10;
+var intervalCount = setInterval(zzalcount, 600);      
+var intervalPosition = setInterval(zzalposition, 1000);        
 
 
 
-setInterval(function () {
+setInterval(function (){
     var counts = mouseMoveCounter
 
-    console.log(jokenum)
+    if(counts>=4){
+                zzal.style.visibility ="visible"                
+
+    }
     
-
-
-    if (counts >= waitNum) {
-        zzal.style.visibility = "visible"
-        message.style.display = "none"
-        rest.style.display = "block"
-        rest.innerHTML = "아니 자네 지금 가만히 있을 때인가?"
-        jokenum = 1
-    }
-
-
-    if (counts < waitNum) {
-        zzal.style.visibility = "hidden"
-        while (zzal.firstChild) {
-
-            zzal.removeChild(zzal.firstChild);
-
-        }
-        message.style.display = "block"
-        rest.style.display = 'none';
+    if(counts<4){
+        
+        zzal.style.visibility ="hidden"
 
     }
-
-    if (jokenum == 1 && counts < 3) {
-        rest.style.display = 'none';
-        message.style.display = 'none';
-        joke.style.display = 'block';
-
-
-        joke.innerHTML = "넝~담~"
-        console.log(jokenum)
-
-    }
-    if (counts == 3) {
-        joke.style.display = 'none';
-        message.style.display = 'block';
-        rest.style.display = 'none';
-
-        jokenum = 0;
-    }
-
-    if (counts == 60) {
-
-        zzal.style.visibility = "hidden"
-        while (zzal.firstChild) {
-
-            zzal.removeChild(zzal.firstChild);
-
-        }
-
-        counts = 0;
-        mouseMoveCounter = 0;
-    }
-
-
-
-
+    
 }, 100)
 
 
@@ -327,7 +255,7 @@ function copyToClipboard(val) {
 }
 
 function copy() {
-    copyToClipboard('https://drive.google.com/drive/folders/1XE3Xg_4xXskUGk55hKuqU_3aqL8a876W?usp=sharing');
+copyToClipboard('https://drive.google.com/drive/folders/1XE3Xg_4xXskUGk55hKuqU_3aqL8a876W?usp=sharing');
     copyAlert.animate(shutterAni, timing);
     console.log('soso?')
 }
