@@ -426,18 +426,19 @@ img {
     position: absolute;
     top: 48%;
     transform: translateY(-50%);
+    z-index: 999;
 }
 
 .leftBtn {
     left: 5%;
-    z-index: 99;
+    z-index: 999;
 
 
 }
 
 .rightBtn {
     right: 5%;
-    z-index: 99;
+    z-index: 999;
 
 }
 
