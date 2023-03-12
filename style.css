@@ -248,7 +248,7 @@ li {
     width: 90vw;
     visibility: hidden;
     position: fixed;
-    top: 50%;
+    top: 46%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 99;
@@ -259,7 +259,7 @@ li {
      width: 90vw;
     position: fixed;
     opacity: 0;
-    top: 50%;
+    top: 46%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 99;
