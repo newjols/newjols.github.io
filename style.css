@@ -496,4 +496,17 @@ img {
     #slide{
         top: 54%;
     }
+    .zzal{
+        display: none;
+        visibility: hidden;
+    }
+}
+
+.zzal{
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
 }
