@@ -182,12 +182,16 @@ li {
     }
     .logo{
                 top: 51%;
+            pointer-events: none;
+
 
         
     }
     .fuck{
         
                 top: 51%;
+            pointer-events: none;
+
 
     }
 
@@ -262,7 +266,9 @@ li {
     top: 46%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 99;
+    z-index: 990;
+        pointer-events: none;
+
 }
 
 
@@ -273,7 +279,9 @@ li {
     top: 46%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 99;
+    z-index: 999;
+    pointer-events: none;
+
 }
 
 
@@ -437,7 +445,6 @@ img {
     position: absolute;
     top: 48%;
     transform: translateY(-50%);
-    z-index: 999;
 }
 
 .leftBtn {
