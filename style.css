@@ -178,10 +178,10 @@ li {
 
 @media (max-width: 450px) {
     .message {
-        top: 51%;
+        top: 55%;
     }
     .logo{
-                top: 55%;
+                top: 65%;
             pointer-events: none;
 
 
@@ -189,7 +189,7 @@ li {
     }
     .fuck{
         
-                top: 55%;
+                top: 65%;
             pointer-events: none;
 
 
@@ -548,7 +548,7 @@ img {
 
     }
     #slide{
-        top: 54%;
+        top: 50%;
     }
     .zzal{
         display: none;
