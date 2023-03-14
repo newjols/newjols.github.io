@@ -576,13 +576,13 @@ img {
 @media (max-width: 450px) {
     .leftBtn {
         left: 0;
-        top: 52%;
+        top: 55%;
 
     }
 
     .rightBtn {
         right: 0;
-        top: 52%;
+        top: 55%;
 
 
     }
@@ -597,7 +597,7 @@ img {
     }
 
     .logo {
-        top: 55%;
+        top: 57%;
         pointer-events: none;
 
 
@@ -606,7 +606,7 @@ img {
 
     .fuck {
 
-        top: 55%;
+        top: 57%;
         pointer-events: none;
 
 
