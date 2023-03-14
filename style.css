@@ -266,7 +266,7 @@ li {
     top: 46%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 990;
+    z-index: 999;
         pointer-events: none;
 
 }

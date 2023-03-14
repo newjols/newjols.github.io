@@ -185,7 +185,7 @@ var message = document.querySelector('.messageText')
 var rest = document.querySelector('.rest')
 var joke = document.querySelector('.joke')
 var jokenum = 0;
-var waitNum = 10;
+var waitNum = 14;
 
 
 
