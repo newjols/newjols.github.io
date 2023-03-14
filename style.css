@@ -15,7 +15,7 @@ body {
 }
 
 body::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 a {
@@ -24,50 +24,50 @@ a {
 
 
 @keyframes shake {
-            0% {
-                transform: translate(0.3px, 0.3px) rotate(0deg);
-            }
+    0% {
+        transform: translate(0.3px, 0.3px) rotate(0deg);
+    }
 
-            10% {
-                transform: translate(-0.3px, -0, 6px) rotate(-0.4deg);
-            }
+    10% {
+        transform: translate(-0.3px, -0, 6px) rotate(-0.4deg);
+    }
 
-            20% {
-                transform: translate(-0, 6px, 0px) rotate(0.8deg);
-            }
+    20% {
+        transform: translate(-0, 6px, 0px) rotate(0.8deg);
+    }
 
-            30% {
-                transform: translate(0, 6px, 0, 6px) rotate(0deg);
-            }
+    30% {
+        transform: translate(0, 6px, 0, 6px) rotate(0deg);
+    }
 
-            40% {
-                transform: translate(0.3px, -0.3px) rotate(0.8deg);
-            }
+    40% {
+        transform: translate(0.3px, -0.3px) rotate(0.8deg);
+    }
 
-            50% {
-                transform: translate(-0.3px, 0, 6px) rotate(-0.8deg);
-            }
+    50% {
+        transform: translate(-0.3px, 0, 6px) rotate(-0.8deg);
+    }
 
-            60% {
-                transform: translate(-0, 6px, 0.3px) rotate(0deg);
-            }
+    60% {
+        transform: translate(-0, 6px, 0.3px) rotate(0deg);
+    }
 
-            70% {
-                transform: translate(0, 6px, 0.3px) rotate(-0.8deg);
-            }
+    70% {
+        transform: translate(0, 6px, 0.3px) rotate(-0.8deg);
+    }
 
-            80% {
-                transform: translate(-0.3px, -0.3px) rotate(0.8deg);
-            }
+    80% {
+        transform: translate(-0.3px, -0.3px) rotate(0.8deg);
+    }
 
-            90% {
-                transform: translate(0.3px, 0, 6px) rotate(0deg);
-            }
+    90% {
+        transform: translate(0.3px, 0, 6px) rotate(0deg);
+    }
 
-            100% {
-                transform: translate(0.3px, -0, 6px) rotate(-0.8deg);
-            }
-        }
+    100% {
+        transform: translate(0.3px, -0, 6px) rotate(-0.8deg);
+    }
+}
 
 
 
@@ -253,13 +253,13 @@ li {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 999;
-        pointer-events: none;
+    pointer-events: none;
 
 }
 
 
 .logo {
-     width: 90vw;
+    width: 90vw;
     position: fixed;
     opacity: 0;
     top: 46%;
@@ -270,24 +270,6 @@ li {
 
 }
 
-
-@media (max-width: 450px) {
-       .logo{
-                top: 55%;
-            pointer-events: none;
-
-
-        
-    }
-    .fuck{
-        
-                top: 55%;
-            pointer-events: none;
-
-
-    }
-
-}
 
 
 .fio {
@@ -540,28 +522,8 @@ img {
 
 }
 
-@media (max-width: 450px) {
-    .leftBtn{
-        left:0;
-            top: 50%;
 
-    }
-    .rightBtn{
-        right:0;
-                    top: 50%;
-
-
-    }
-    #slide{
-        top: 50%;
-    }
-    .zzal{
-        display: none;
-        visibility: hidden;
-    }
-}
-
-.zzal{
+.zzal {
     width: 200px;
     height: auto;
     object-fit: contain;
@@ -569,35 +531,36 @@ img {
     transform: translate(-50%, -50%);
     visibility: hidden;
     z-index: 98;
-    
+
 }
 
-.zzals{
-    
+.zzals {
+
     position: absolute;
-        transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 
 }
 
-.rest{
+.rest {
     font-weight: 500;
-   color: var(--prim);
+    color: var(--prim);
     font-size: 14px;
     letter-spacing: 2px;
     word-spacing: 0px;
-                animation: shake 0.2s;
-            animation-iteration-count: infinite;
+    animation: shake 0.2s;
+    animation-iteration-count: infinite;
     z-index: 99;
 }
 
-.joke{
+.joke {
     font-weight: 500;
-   color: var(--text);
+    color: var(--text);
     font-size: 14px;
     letter-spacing: 2px;
-    
+
 }
-.gif{
+
+.gif {
     position: fixed;
     width: 100px;
     top: calc(45% + 70px);
@@ -605,6 +568,47 @@ img {
     transform: translate(-50%, -50%);
 }
 
-.copyAlert{
+.copyAlert {
     display: none;
+}
+
+
+@media (max-width: 450px) {
+    .leftBtn {
+        left: 0;
+        top: 55%;
+
+    }
+
+    .rightBtn {
+        right: 0;
+        top: 55%;
+
+
+    }
+
+    #slide {
+        top: 50%;
+    }
+
+    .zzal {
+        display: none;
+        visibility: hidden;
+    }
+
+    .logo {
+        top: 55%;
+        pointer-events: none;
+
+
+
+    }
+
+    .fuck {
+
+        top: 55%;
+        pointer-events: none;
+
+
+    }
 }
