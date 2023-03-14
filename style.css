@@ -180,20 +180,6 @@ li {
     .message {
         top: 55%;
     }
-    .logo{
-                top: 80%;
-            pointer-events: none;
-
-
-        
-    }
-    .fuck{
-        
-                top: 65%;
-            pointer-events: none;
-
-
-    }
 
 }
 
@@ -281,6 +267,25 @@ li {
     transform: translate(-50%, -50%);
     z-index: 999;
     pointer-events: none;
+
+}
+
+
+@media (max-width: 450px) {
+       .logo{
+                top: 65%;
+            pointer-events: none;
+
+
+        
+    }
+    .fuck{
+        
+                top: 65%;
+            pointer-events: none;
+
+
+    }
 
 }
 
