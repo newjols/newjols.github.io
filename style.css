@@ -273,7 +273,7 @@ li {
 
 @media (max-width: 450px) {
        .logo{
-                top: 65%;
+                top: 55%;
             pointer-events: none;
 
 
@@ -281,7 +281,7 @@ li {
     }
     .fuck{
         
-                top: 65%;
+                top: 55%;
             pointer-events: none;
 
 
