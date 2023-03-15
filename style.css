@@ -172,7 +172,7 @@ li {
     transform: translate(-50%, -50%);
     width: 342px;
     font-size: 13px;
-    line-height: 20.5px;
+    line-height: 21px;
     letter-spacing: 1.3px;
     word-spacing: 3px;
     text-align: center;
@@ -406,7 +406,7 @@ img {
     height: calc(100vh - 150px);
     max-height: 800px;
     left: 50%;
-    top: 47%;
+    top: 52%;
     padding: 0 0;
     transform: translate(-50%, -50%);
     overflow-x: hidden;
@@ -562,7 +562,7 @@ img {
 .gif {
     position: fixed;
     width: 100px;
-    top: calc(45% + 70px);
+    top: calc(45% + 67px);
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -615,6 +615,6 @@ img {
 
     }
     .footer{
-            bottom: 16px;        
+            bottom: 15px;        
     }
 }
