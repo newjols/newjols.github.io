@@ -19,6 +19,9 @@ const sliderContainer = document.querySelector('slider-container');
 const slider = document.querySelector('.slider');
 const prevBtn = document.querySelector('.leftBtn');
 const nextBtn = document.querySelector('.rightBtn');
+let footer = document.getElementsByClassName('footer');
+let footerText = document.getElementsByClassName('footerText');
+
 
 const shutterAni = [{
         opacity: 1
@@ -57,75 +60,90 @@ function fadeLogo() {
 
 
 
-function Mobile(){
-	return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);}
-	
-    if (Mobile()){
-        console.log('soso')
-        
-    } else {
-        menuText[0].addEventListener('mouseover', () => {
-    fuck[0].style.visibility = 'visible'
-    fuck[0].style.opacity = '1';
+function Mobile() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
 
-    menuText[0].style.color = 'var(--prim)'
-})
+if (Mobile()) {
+    console.log('soso')
 
-menu[0].addEventListener('mouseout', () => {
-    fuck[0].style.visibility = 'hidden'
-    menuText[0].style.color = 'var(--text)'
+} else {
+    menuText[0].addEventListener('mouseover', () => {
+        fuck[0].style.visibility = 'visible'
+        fuck[0].style.opacity = '1';
 
+        menuText[0].style.color = 'var(--prim)'
+    })
 
-})
-menu[1].addEventListener('mouseover', () => {
-    fuck[0].style.visibility = 'visible'
-    fuck[0].style.opacity = '1';
-
-    menuText[1].style.color = 'var(--prim)'
-
-})
-
-menu[1].addEventListener('mouseout', () => {
-    fuck[0].style.visibility = 'hidden'
-    menuText[1].style.color = 'var(--text)'
-
-})
-menu[2].addEventListener('mouseover', () => {
-    fuck[0].style.visibility = 'visible'
-    fuck[0].style.opacity = '1';
-
-    menuText[2].style.color = 'var(--prim)'
-
-})
-
-menu[2].addEventListener('mouseout', () => {
-    fuck[0].style.visibility = 'hidden'
-    menuText[2].style.color = 'var(--text)'
-
-})
-menu[3].addEventListener('mouseover', () => {
-    fuck[0].style.visibility = 'visible'
-    fuck[0].style.opacity = '1';
-
-    menuText[3].style.color = 'var(--prim)'
-
-})
-
-menu[3].addEventListener('mouseout', () => {
-    fuck[0].style.visibility = 'hidden'
-    menuText[3].style.color = 'var(--text)'
-
-})
-
-        
-        
-    }
+    menu[0].addEventListener('mouseout', () => {
+        fuck[0].style.visibility = 'hidden'
+        menuText[0].style.color = 'var(--text)'
 
 
-function copy(){
-     window.navigator.clipboard.writeText(copyAlert.textContent).then(() => {
+    })
+    menu[1].addEventListener('mouseover', () => {
+        fuck[0].style.visibility = 'visible'
+        fuck[0].style.opacity = '1';
+
+        menuText[1].style.color = 'var(--prim)'
+
+    })
+
+    menu[1].addEventListener('mouseout', () => {
+        fuck[0].style.visibility = 'hidden'
+        menuText[1].style.color = 'var(--text)'
+
+    })
+    menu[2].addEventListener('mouseover', () => {
+        fuck[0].style.visibility = 'visible'
+        fuck[0].style.opacity = '1';
+
+        menuText[2].style.color = 'var(--prim)'
+
+    })
+
+    menu[2].addEventListener('mouseout', () => {
+        fuck[0].style.visibility = 'hidden'
+        menuText[2].style.color = 'var(--text)'
+
+    })
+    menu[3].addEventListener('mouseover', () => {
+        fuck[0].style.visibility = 'visible'
+        fuck[0].style.opacity = '1';
+
+        menuText[3].style.color = 'var(--prim)'
+
+    })
+
+    menu[3].addEventListener('mouseout', () => {
+        fuck[0].style.visibility = 'hidden'
+        menuText[3].style.color = 'var(--text)'
+
+    })
+
+    footer[0].addEventListener('mouseover', () => {
+        fuck[0].style.visibility = 'visible'
+        fuck[0].style.opacity = '1';
+
+        footerText[0].style.color = 'var(--prim)'
+
+    })
+
+    footer[0].addEventListener('mouseout', () => {
+        fuck[0].style.visibility = 'hidden'
+        footerText[0].style.color = 'var(--text)'
+
+    })
+
+
+
+}
+
+
+function copy() {
+    window.navigator.clipboard.writeText(copyAlert.textContent).then(() => {
         alert("초대글이 복사되었습니다 핫. 압도적 감사..");
-      });
+    });
 }
 
 
@@ -185,21 +203,21 @@ var message = document.querySelector('.messageText')
 var rest = document.querySelector('.rest')
 var joke = document.querySelector('.joke')
 var jokenum = 0;
-var waitNum = 14;
+var waitNum = 16;
 
 
 
 setInterval(function () {
     var counts = mouseMoveCounter
 
-    
+
 
 
     if (counts >= waitNum) {
         zzal.style.visibility = "visible"
         message.style.display = "none"
         rest.style.display = "block"
-        rest.innerHTML = "아니 자네 지금 가만히 있을 때인가?"
+        rest.innerHTML = "아니 자네 지금 넋놓고 있을 때인가?"
         jokenum = 1
     }
 
@@ -326,4 +344,3 @@ nextBtn.addEventListener('click', () => {
 
 
 })
-

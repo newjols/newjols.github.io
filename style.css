@@ -3,7 +3,7 @@
 body {
     --bg: #ffffff;
     --text: #000000;
-    --prim: #ff76f7;
+    --prim: #ff44e9;
     background-color: var(--bg);
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 400;
@@ -151,6 +151,8 @@ li {
 
 .menu {
     top: 20px;
+    margin-left: -5px;
+
 }
 
 .footer {
@@ -158,6 +160,9 @@ li {
     bottom: 20px;
     white-space: nowrap;
     text-align: center;
+    margin-left: 6px;
+
+    
 }
 
 .message {
@@ -168,20 +173,14 @@ li {
     width: 342px;
     font-size: 13px;
     line-height: 20.5px;
-    letter-spacing: 1px;
+    letter-spacing: 1.3px;
     word-spacing: 3px;
     text-align: center;
     pointer-events: none;
     z-index: 100;
+    margin-left: 1.3px;
 }
 
-
-@media (max-width: 450px) {
-    .message {
-        top: 55%;
-    }
-
-}
 
 .smallTalk {
     position: absolute;
@@ -574,6 +573,10 @@ img {
 
 
 @media (max-width: 450px) {
+    .message {
+        top: 52%;
+    }
+    
     .leftBtn {
         left: 0;
         top: 55%;
@@ -597,7 +600,7 @@ img {
     }
 
     .logo {
-        top: 57%;
+        top: 54%;
         pointer-events: none;
 
 
@@ -606,9 +609,12 @@ img {
 
     .fuck {
 
-        top: 57%;
+        top: 54%;
         pointer-events: none;
 
 
+    }
+    .footer{
+            bottom: 16px;        
     }
 }
