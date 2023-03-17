@@ -607,8 +607,8 @@ img {
 
     }
     
-    .text-warp{
-        bottom: calc(-100%)
+    #slide .slider-container .slider span .text-wrap{
+        bottom: calc(-100% - 16px)
     }
     
 
