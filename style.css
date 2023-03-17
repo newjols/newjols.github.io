@@ -367,9 +367,9 @@ img {
 }
 
 .list-icon {
-    width: 17px;
+    width: 18px;
     float: left;
-    padding-top: 1px;
+    padding-top: 0px;
 
 }
 
@@ -464,7 +464,7 @@ img {
 
 #slide .slider-container .slider span .text-wrap {
     position: relative;
-    bottom: -105%;
+    bottom: calc(-100% - 35px);
     width: 70%;
     color: var(--text);
     left: 50%;
@@ -489,20 +489,20 @@ img {
 
 
 #slide .slider-container .slider span .text-wrap h1 {
-    line-height: 140%;
-    font-size: 16px;
-    letter-spacing: 1px;
-    margin: 8px 0 3px 0;
+    font-size: 15px;
+    letter-spacing: 2px;
+    margin: 8px 0 2px 0;
     text-align: center;
-    font-weight: 400;
+    font-weight: 500;
 
 
 }
 
 #slide .slider-container .slider span .text-wrap h4 {
     font-size: 12px;
-    letter-spacing: 0.7 px;
-
+    letter-spacing: 0.6px;
+    line-height: 144%;
+    word-spacing: -0.5px;
     margin: 0 0 0 0;
     text-align: center;
     font-weight: 400;
@@ -513,10 +513,10 @@ img {
 }
 
 #slide .slider-container .slider span .text-wrap h5 {
-    line-height: 140%;
-    font-size: 11px;
-    letter-spacing: 1.4px;
-    margin: 0px 0 -4px 0;
+    line-height: 130%;
+    font-size: 10.5px;
+    letter-spacing: 2px;
+    margin: 0px 0 -8.3px 0;
     text-align: center;
 
 }
