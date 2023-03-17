@@ -606,6 +606,11 @@ img {
 
 
     }
+    
+    .text-warp{
+        bottom: calc(-100%)
+    }
+    
 
     .fuck {
 
